@@ -17,7 +17,7 @@
 
 .topHeader {display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;}
 
-.brandSubtitle {font-family: 'Century Gothic', sans-serif; font-size: 10px; color: #333;}
+.brandSubtitle {font-family: 'Josefin Sans', sans-serif; font-size: 10px; color: #333;}
 
 .title {font-size: 24px; font-weight: 700; color: #1A1A1A; margin: 0;}
 
@@ -129,7 +129,7 @@
                   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;}
 
 .bannerSimpleText {font-size: 12px; letter-spacing: 0.08em; font-weight: 500; color: #333;
-                   font-family: 'Century Gothic', sans-serif;}
+                   font-family: 'Josefin Sans', sans-serif;}
 
 .tornOff {transform: translateX(20px) rotate(-1.5deg); z-index: 10; box-shadow: -8px 8px 16px rgba(0, 0, 0, 0.12);}
 

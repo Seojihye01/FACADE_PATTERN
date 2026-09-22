@@ -22,12 +22,12 @@
 
 .dateText, .seasonText {font-size: 9px; letter-spacing: 10%; color: #555; text-transform: uppercase;}
 
-.brandTitle {font-family: 'Century Gothic', sans-serif; font-size: 20px; letter-spacing: 0.18em; margin: 0;
+.brandTitle {font-family: 'Josefin Sans', sans-serif; font-size: 20px; letter-spacing: 0.18em; margin: 0;
              text-align: center; color: #1A1A1A;}
 
 .ctaFooter {display: flex; flex-direction: column; gap: 24px;}
 
-.lookbookLink {display: flex; justify-content: space-between; align-items: center; font-family: 'Century Gothic', sans-serif;
+.lookbookLink {display: flex; justify-content: space-between; align-items: center; font-family: 'Josefin Sans', sans-serif;
                font-size: 22px; letter-spacing: 0.1em;}
 
 .arrowContainer {flex: 1; display: flex; justify-content: flex-end; align-items: center; padding-left: 20px;}
