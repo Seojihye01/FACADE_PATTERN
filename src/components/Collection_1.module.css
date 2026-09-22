@@ -1,0 +1,39 @@
+.container {width: 100%; min-height: 100vh; display: flex; background-color: #F7F7F7; box-sizing: border-box;}
+
+.imageSection {width: 38%; min-width: 320px; height: 100vh; position: relative; overflow: hidden; margin-left: 250px;}
+
+.mainImage {width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(50%);}
+
+.textSection {width: 62%; display: flex; flex-direction: column; justify-content: center; padding: 0 10% 0 8%;
+              box-sizing: border-box; color: #1A1A1A;}
+
+.topHeader {display: flex; flex-direction: column; gap: 10px; margin-bottom: 60px;}
+
+.subSubtitle {font-size: 14px; letter-spacing: 0.02em; color: #777;}
+
+.dateText {font-size: 10px; letter-spacing: 0.05em; font-weight: 700; color: #222; margin-top: 2px;}
+
+.brandTitle {font-family: 'Century Gothic', sans-serif; font-size: 14px; letter-spacing: 0.03em; color: #444;
+             margin-top: 2px;}
+
+.mainTitle {font-size: 42px; letter-spacing: -0.01em; font-weight: 700; color: #1A1A1A; margin: 20px 0 130px 0;}
+
+.descriptionGroup {display: flex; flex-direction: column; gap: 12px;}
+
+.highlightText {font-size: 13px; letter-spacing: -0.02em; font-weight: 600; color: #1A1A1A; margin: 0 0 6px 0;}
+
+.descText {font-size: 16px; letter-spacing: -0.02em; font-weight: 400; color: #555; line-height: 1.4; margin: 0;}
+
+/* Responsive Design */
+/* 1. Tablet (900px 이하) */
+@media (max-width: 900px) {
+
+  .container {flex-direction: column; min-height: auto;}
+
+  .imageSection {width: 100%; height: 90vh; margin-left: 0;}
+
+  .textSection {width: 100%; padding: 60px 24px;}
+
+  .mainTitle {font-size: 32px; margin-bottom: 50px;}
+
+}

@@ -1,0 +1,71 @@
+.footerContainer {width: 100%; background-color: #E1E3E8; color: #1A1A1A; padding: 40px 0 36px 0; box-sizing: border-box;}
+
+.footerInner {max-width: 1440px; width: 100%; margin: 0 auto; padding: 0 40px;  display: flex; flex-direction: column;
+              gap: 32px; box-sizing: border-box;}
+
+.topRow {display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 11px; letter-spacing: 5%;}
+
+.copyright {font-weight: 400; color: #1A1A1A;}
+
+.linkGroup {display: flex; gap: 60px;}
+
+.leftLinks, .rightLinks {display: flex; gap: 24px;}
+
+.linkGroup a {color: rgba(26, 26, 26, 0.6); text-decoration: none; transition: all 0.2s ease;}
+
+.linkGroup a:hover {color: rgba(26, 26, 26, 0.8);}
+
+.linkGroup a:active {transform: scale(0.95);}
+
+.bottomRow {display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 10px;
+            color: #666; line-height: 1.6;}
+
+.infoItem {white-space: nowrap;}
+
+.policyLink {text-decoration: none; font-weight: 500; margin-left: 8px;}
+
+.policyLink:hover {text-decoration: underline;}
+
+/* Tablet (1024px 이하) */
+@media (max-width: 1024px) {
+
+  .footerInner {max-width: 1024px; padding: 0 32px; gap: 28px;}
+
+  .linkGroup {gap: 32px;}
+
+  .leftLinks, .rightLinks {gap: 16px;}
+
+  .bottomRow {display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; row-gap: 8px;}
+
+}
+
+
+/* Mobile (768px 이하) */
+@media (max-width: 768px) {
+
+  .footerInner {max-width: 768px; padding: 0 24px; align-items: center; text-align: center; gap: 32px;}
+
+  .topRow {flex-direction: column-reverse; gap: 20px;}
+
+  .linkGroup {gap: 24px;}
+
+  .copyright {font-size: 10px;}
+
+  .bottomRow {grid-template-columns: repeat(2, auto); column-gap: 40px; row-gap: 10px; justify-content: center;
+              text-align: left;}
+
+}
+
+
+/* Compact Mobile (480px 이하) */
+@media (max-width: 480px) {
+
+  .footerInner {max-width: 480px; padding: 0 20px; gap: 28px;}
+
+  .topRow {gap: 16px;}
+
+  .linkGroup {gap: 20px;}
+
+  .bottomRow {column-gap: 20px; row-gap: 8px; font-size: 9.5px;}
+  
+}

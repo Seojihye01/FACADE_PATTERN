@@ -1,0 +1,479 @@
+.headerContainer {width: 100%; height: 72px; background-color: #E1E3E8; position: fixed; top: 0; left: 0;
+                  z-index: 100; font-family: 'Century Gothic', sans-serif; color: #1A1A1A;}
+
+.headerInner {margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 100%;
+              padding: 0 24px;}
+
+/* 1. Responsive Breakpoints Base Widths */
+@media (min-width: 1025px) { .headerInner { max-width: 1440px; } }
+@media (max-width: 1024px) and (min-width: 769px) { .headerInner { max-width: 1024px; } }
+@media (max-width: 768px) and (min-width: 481px) { .headerInner { max-width: 768px; } }
+@media (max-width: 480px) { .headerInner { max-width: 480px; } }
+
+.logo {font-family: 'Century Gothic', AppleGothic, sans-serif; cursor: pointer; letter-spacing: 10%; white-space: nowrap;}
+
+.desktopNav {display: flex; justify-content: space-between; align-items: center; width: 100%; margin-left: 160px;}
+
+.leftNav {display: flex; align-items: center; gap: 60px;}
+
+.leftNav button, .rightNav button {background: none; border: none; margin: 0 12px; cursor: pointer; padding: 0;
+                                   color: #1A1A1A; font-size: 14px; letter-spacing: 5%; font-weight: 300;}
+
+.leftNav button.activeBtn, .rightNav button.activeBtn {font-weight: 500;}
+
+.dropdownPanel {position: absolute; top: 100%; left: 0; width: 100%; background-color: #E1E3E8; z-index: 99;
+                border-top: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+                animation: slideDown 0.3s ease-in-out forwards; transform-origin: top;}
+
+@keyframes slideDown {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.subCategoryModal, .subCategoryGrid {max-width: 1440px; min-height: 180px; height: 220px; margin: 0 auto; font-size: 12px; 
+                                     letter-spacing: 10%; font-weight: 400; color: rgba(26, 26, 26, 0.4); 
+                                     cursor: pointer; transition: opacity 0.15s ease;}
+
+.subCategoryModal {padding: 20px 24px 28px 352px; gap: 25px; display: flex; flex-direction: column;}
+
+.subCategoryGrid {padding: 20px 24px 28px 510px; gap: 25px 32px; display: flex; gap: 48px;}
+
+.categoryColumn {display: flex; flex-direction: column; gap: 25px; min-width: 140px;}
+
+.subCategoryModal p, .subCategoryGrid span {cursor: pointer; width: fit-content; transition: color 0.15s ease;}
+
+.subCategoryModal p:hover, .subCategoryGrid span:hover {color: #1A1A1A;}
+
+.subCategoryModal p.activeItem, .subCategoryGrid span.activeItem {text-decoration: underline; text-underline-offset: 4px;}
+
+.hamburgerBtn {display: none; background: none; border: none; cursor: pointer; padding: 10px;}
+
+.hamburgerBtn img {width: 20px; height: 20px; display: block;}
+
+/* Mobile Responsive Display Switch */
+@media (max-width: 768px) {
+
+  .desktopNav {display: none;}
+
+  .hamburgerBtn {display: block;}
+
+}
+
+/* Overlay & Modals */
+.overlayBackdrop {position: fixed; top: 72px; left: 0; width: 100vw; height: calc(100vh - 72px); z-index: 200;  
+                  display: flex; justify-content: flex-end; animation: fadeIn 0.25s ease-in-out forwards;}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.rightDrawerContent {position: absolute; top: 0; right: 0; width: 650px; height: 400px; background-color: #E1E3E8;
+                     border-top: 1px solid rgba(0, 0, 0, 0.05); padding: 48px 32px 32px 32px; 
+                     box-shadow: -4px 0 16px rgba(0, 0, 0, 0.06); 
+                     animation: slideLeft 0.3s ease-in-out forwards; border-bottom-left-radius: 10px;}
+
+@keyframes slideLeft {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0);}
+}
+
+.closeBtn {position: absolute; top: 20px; right: 40px; background: none; border: none; cursor: pointer; padding: 0; z-index: 10;}
+
+.closeBtn img {width: 18px; height: 18px; display: block;}
+
+/* Search Modal */
+
+.searchModal {display: flex; flex-direction: column; height: 100%; padding-top: 20px;}
+
+.searchInputWrapper input {width: 100%; border: none; background: transparent; font-size: 14px; outline: none;
+                           padding: 2px 0; color: #1A1A1A;}
+
+.searchDivider {border: none; border-top: 1px solid #1A1A1A; margin: 6px 0 20px 0;}
+
+.searchBody {display: flex; gap: 32px;}
+
+.recommendSection {flex: 1.5; display: flex; flex-direction: column;}
+
+.recommendSection h4, .trendingSection h4 {font-size: 12px; letter-spacing: 5%; font-weight: 500; color: #666;
+                                           margin-bottom: 16px;}
+
+.productGrid {display: flex; gap: 10px;}
+
+.productCard {width: 89px; height: 125px; background-color: #D6D8DE; border-radius: 5px; overflow: hidden;
+              cursor: pointer; transition: transform 0.2s ease;}
+
+.productCard:hover {transform: translateY(-3px);}
+
+.productCard img {width: 100%; height: 100%; object-fit: cover;}
+
+.carouselArrows {display: flex; gap: 16px; margin-top: 16px;}
+
+.arrowBtn {background: none; border: none; cursor: pointer; padding: 0; display: flex; justify-content: center;
+           align-items: center; opacity: 0.5; transition: opacity 0.2s ease, transform 0.1s ease;}
+
+.arrowBtn img {width: 16px; height: 16px; display: block;}
+
+.arrowNext img {transform: rotate(180deg);}
+
+.arrowBtn:hover:not(:disabled) {opacity: 1;}
+
+.arrowBtn:active:not(:disabled) {transform: scale(0.95);}
+
+.arrowBtn:disabled {opacity: 0.15; cursor: default;}
+
+.trendingSection {flex: 1;}
+
+.trendingList {list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px;}
+
+.trendingList li {font-size: 12px; color: rgba(26, 26, 26, 0.6); cursor: pointer; transform-origin: left center;
+                  transition: transform 0.1s ease, color 0.15s ease;}
+
+.trendingList li:hover {color: #1A1A1A;}
+
+.trendingList li:active {transform: scale(0.95);}
+
+/* Login Modal */
+
+.loginModal {display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;
+             padding-top: 40px; color: #1A1A1A;}
+
+.loginContent {width: 400px; display: flex; flex-direction: column;}
+
+.loginInputWrapper {display: flex; flex-direction: column; gap: 20px; margin-bottom: 24px;}
+
+.loginInputWrapper input {width: 100%; border: none; background: transparent; border-bottom: 1px solid #1A1A1A;
+                          outline: none; padding: 8px 0; font-size: 13px; color: #1A1A1A;}
+
+.loginInputWrapper input::placeholder {color: #8E8E8E;}
+
+.loginActionBtn {width: 100%; height: 40px; border: none; background-color: rgba(26, 26, 26, 0.15); color: rgba(26, 26, 26, 0.8);
+                 border-radius: 2px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; margin-bottom: 20px;}
+
+.loginActionBtn:active {background-color: rgba(26, 26, 26, 0.3); color: #1A1A1A;}
+
+.loginOptions {display: flex; justify-content: space-between; align-items: flex-start; font-size: 12px; margin-bottom: 12px;}
+
+.customCheckboxWrapper {display: flex; align-items: center; gap: 10px; cursor: pointer; color: #555; user-select: none;}
+
+.checkboxBox {width: 12px; height: 12px; border: 1px solid rgba(26, 26, 26, 0.5); border-radius: 1px; background-color: transparent;
+              display: flex; justify-content: center; align-items: center; transition: all 0.15s ease;}
+
+.checkboxBox.checked {border-color: rgba(26, 26, 26, 0.5);}
+
+.checkboxBox img {width: 11px; height: 11px;}
+
+.loginLinksRight {display: flex; flex-direction: column; align-items: flex-end; gap: 12px;}
+
+.loginFooter {display: flex; justify-content: space-between; align-items: center; font-size: 12px;}
+
+.socialButtons {display: flex; gap: 10px;}
+
+.textLink {cursor: pointer; color: #555; transition: color 0.15s ease;}
+
+.textLink:hover {color: #555; text-decoration: underline; text-underline-offset: 3px;}
+
+/* Cart Modal */
+
+.cartModal {display: flex; align-items: flex-start; width: 100%; height: 100%; padding-top: 32px; color: #1A1A1A;}
+
+.cartLeftCol {width: 80px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px;}
+
+.cartDeleteBtn {width: 64px; height: 28px; border: none; background-color: rgba(26, 26, 26, 0.15); cursor: pointer; margin: 0;
+                color: rgba(26, 26, 26, 0.8); font-size: 11px; border-radius: 2px; transition: background-color 0.15s ease;}
+
+.cartDeleteBtn:active {background-color: rgba(26, 26, 26, 0.3);}
+
+.cartPagination {display: flex; gap: 10px; font-size: 10px; font-weight: 500; color: rgba(26, 26, 26, 0.5); padding-left: 2px;}
+
+.cartPagination span {cursor: pointer;}
+
+.cartPagination span.activePage {color: #1A1A1A;}
+
+.cartCenterCol {flex: 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 12px;}
+
+.cartItemRow {display: flex; align-items: center; gap: 20px; height: 90px;}
+
+.cartThumb {width: 64px; height: 90px; background-color: #D6D8DE; border-radius: 5px; overflow: hidden; flex-shrink: 0;}
+
+.cartThumb img {width: 100%; height: 100%; object-fit: cover;}
+
+.cartItemInfo {display: flex; flex-direction: column; gap: 16px; font-size: 12px;}
+
+.cartItemMeta {display: flex; gap: 12px; color: #1A1A1A;}
+
+.qtyControl {display: flex; align-items: center; gap: 6px; font-size: 11px;}
+
+.qtyControl button {width: 18px; height: 18px; background: transparent; cursor: pointer; padding: 0; display: flex;
+                    justify-content: center; align-items: center; font-size: 11px; transform-origin: center center;
+                    transition: transform 0.15s ease, color 0.15s ease;}
+
+.qtyControl button:active {transform: scale(0.9);}
+
+.customSelectContainer {position: relative; display: inline-block; width: 120px; max-width: max-content;}
+
+.customSelectTrigger {display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 16px; 
+                      background: transparent; border: none; padding: 0 2px; cursor: pointer; outline: none;
+                      font-size: 11px; font-weight: 400; color: #1A1A1A; white-space: nowrap;}
+
+.customSelectTrigger span {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.selectArrow {transition: transform 0.2s ease; opacity: 0.8; flex-shrink: 0;}
+
+.arrowOpen {transform: rotate(180deg);}
+
+.customOptionList {position: absolute; top: calc(100% + 4px); left: 0; min-width: 70px; background-color: #F0F0F0;
+                   border: 1px solid rgba(26, 26, 26, 0.12); border-radius: 4px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+                   list-style: none; margin: 0; padding: 4px 0; z-index: 100;}
+
+.customOptionItem {padding: 6px 12px; font-size: 11px; color: #1A1A1A; cursor: pointer; white-space: nowrap;
+                   transition: background-color 0.15s ease;}
+
+.customOptionItem:hover {background-color: rgba(26, 26, 26, 0.05);}
+
+.selectedOption {font-weight: 500; background-color: rgba(26, 26, 26, 0.03);}
+
+.cartItemPrice {letter-spacing: 5%; font-weight: 500;}
+
+.emptyCartRow {height: 90px; visibility: hidden;}
+
+.cartDivider {width: 1px; height: 300px; border-right: 1px dashed #A0A5AE; margin: 0 28px;}
+
+.cartRightCol {width: 180px; height: 300px; display: flex; justify-content: space-between; flex-direction: column;
+               align-self: flex-start;}
+
+.cartTotalWrapper {display: flex; flex-direction: column; align-items: flex-end; text-align: right;}
+
+.totalTitle {font-size: 10px; font-weight: 600; margin-bottom: 20px; line-height: 1;}
+
+.totalCount {font-size: 10px; color: #666; margin-bottom: 7px;}
+
+.totalPrice {font-size: 13px; letter-spacing: 5%; font-weight: 400;}
+
+.cartCtaWrapper {width: 100%; display: flex; flex-direction: column; gap: 8px;}
+
+.quickBuyBtn {width: 100%; height: 32px; border: none; background-color: rgba(26, 26, 26, 0.15);
+                            color: rgba(26, 26, 26, 0.8); font-size: 11px; cursor: pointer; border-radius: 2px;
+                            transition: background-color 0.15s ease;}
+
+.quickBuyBtn:active {background-color: rgba(26, 26, 26, 0.3);}
+
+/* Benefits Modal */
+
+.beneModal {display: flex; width: 100%; height: 100%; padding-top: 10px; gap: 40px; color: #1A1A1A;}
+
+.beneLeftCol {width: 190px; display: flex; flex-direction: column;}
+
+.beneTitleArea {margin-bottom: 24px;}
+
+.beneTitleArea span {font-size: 10px; letter-spacing: 5%; font-weight: 400; color: #1A1A1A;}
+
+.beneTitleDivider {border-top: 1px dashed #A0A5AE; margin-top: 12px; width: 100%;}
+
+.beneList {display: flex; flex-direction: column; gap: 16px;}
+
+.beneTabBtn {display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; 
+             border: none; padding: 0; cursor: pointer; font-size: 12px; letter-spacing: 5%; color: rgba(26, 26, 26, 0.5); 
+             transition: color 0.15s ease;}
+
+.beneTabBtn.activeTab {font-weight: 500; color: rgba(26, 26, 26, 0.8);}
+
+.beneNum {display: inline-block; flex-shrink: 0; text-align: left;}
+
+.beneLabel {letter-spacing: 0.02em; text-align: right; flex: 1;}
+
+.beneCard {flex: 1; background-color: #F0F0F0; padding: 40px 48px; text-align: left; min-height: 280px;
+           display: flex; justify-content: center; align-items: center;}
+
+.beneCard p {font-size: 12px; font-weight: 400; color: #1A1A1A; line-height: 1.8; margin: 0; word-break: keep-all;}
+
+.introLogo {font-family: 'Century Gothic', AppleGothic, sans-serif; font-size: 13px; letter-spacing: 0.15em;
+            font-weight: 400; color: #1A1A1A; margin: 0;}
+
+/* Mobile Slide Drawer */
+.mobileDrawerOverlay {position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.4);
+                      z-index: 300; display: flex; justify-content: flex-end;}
+
+.mobileDrawerPanel {position: relative; width: 420px; height: 680px; background-color: #E1E3E8; padding: 40px 32px 32px 32px;
+                    display: flex; flex-direction: column; box-sizing: border-box; box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);}
+
+.mobileTopNav {display: flex; justify-content: space-between; margin-top: 24px; margin-bottom: 80px; flex-shrink: 0;}
+
+.mobileBottomNav {display: flex; flex-direction: column; gap: 20px; margin: 12px 0 50px 0; transition: all 0.25s ease-in-out;}
+
+.mobileTopNav button, .mobileBottomNav button {background: none; border: none; cursor: pointer; padding: 0; font-weight: 400;}
+
+.mobileTopNav button {font-size: 12px; color: rgba(26, 26, 26, 0.5);}
+
+.mobileTopNav button:hover {color: #1A1A1A;}
+
+.mobileTopNav button.active {color: #1A1A1A; text-decoration: underline; text-underline-offset: 4px;}
+
+.mobileBottomNav button {text-align: left; font-size: 14px; color: #1A1A1A;}
+
+.mobileBottomNav.isCollapsed {margin-bottom: 50px;}
+
+.mobileBodyArea {overflow: hidden; max-height: 0; opacity: 0; margin-bottom: 0; flex-shrink: 0;
+                 transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease-in-out, 
+                             margin-bottom 0.3s ease-in-out;}
+
+.mobileBodyArea.isOpen {max-height: 500px; opacity: 1; margin-bottom: 24px;}
+
+.mobileBodyInner {max-height: 480px;}
+
+.mobileSubList {display: flex; flex-direction: column; gap: 15px; padding-left: 12px; margin-top: 8px;}
+
+.mobileSubList p {font-size: 12px; color: rgba(26, 26, 26, 0.5); cursor: pointer; margin: 0;}
+
+.mobileSubList p:hover {color: #1A1A1A;}
+
+.mobileSubList p:active {color: #1A1A1A; text-decoration: underline; text-underline-offset: 4px;}
+
+.mobileLogo {text-align: left; margin-top: auto; font-family: 'Century Gothic', AppleGothic, sans-serif; font-size: 20px;
+             letter-spacing: 10%; cursor: pointer; flex-shrink: 0;}
+
+/* Mobile Search */
+.mobileSearchSection {display: flex; flex-direction: column;}
+
+.mobileSearchInputWrapper {width: 100%; border-bottom: 1px solid #1A1A1A; margin-bottom: 32px;}
+
+.mobileSearchInputWrapper input {width: 100%; border: none; background: transparent; outline: none; padding: 4px 0;
+                                 font-size: 14px;}
+
+.mobileSectionTitle {font-size: 11px; letter-spacing: 5%; color: rgba(26, 26, 26, 0.6); display: block; margin-bottom: 20px;}
+
+.mobileRecommendSection {margin-bottom: 30px;}
+
+.mobileSliderContainer {display: flex; justify-content: space-between; align-items: center; gap: 10px;}
+
+.mobileThumbList {display: flex; gap: 10px; overflow: hidden; justify-content: center; flex: 1;}
+
+.mobileThumbList .productCard {width: 80px; height: 112px; background-color: #D6D8DE; border-radius: 5px;
+                               overflow: hidden; flex-shrink: 0;}
+
+.mobileThumbList .productCard img {width: 100%; height: 100%; object-fit: cover; display: block;}
+
+.mobileSlideArrow {background: none; border: none; cursor: pointer; color: rgba(26, 26, 26, 0.5); padding: 4px; display: flex;
+                   justify-content: center; align-items: center; transition: all 0.2s ease-in-out;}
+
+.mobileSlideArrow:disabled {opacity: 0.3; cursor: default;}
+
+.mobileSlideArrow img {width: 12px; height: 12px; display: block;}
+
+.mobileSlideArrow:active:not(:disabled) {transform: scale(0.9);}
+
+.mobileTrendingSection {display: flex; flex-direction: column; gap: 20px;}
+
+.mobileTrendingGrid {display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 32px;}
+
+.mobileTrendingGrid span {font-size: 11px; color: rgba(26, 26, 26, 0.6); cursor: pointer; display: inline-block;
+                          transition: all 0.2s ease-in-out; transform-origin: left center;}
+
+.mobileTrendingGrid span:hover {color: rgba(26, 26, 26, 0.8);}
+
+.mobileTrendingGrid span:active {transform: scale(0.95);}
+
+/* Mobile Login */
+.mobileLoginSection {display: flex; flex-direction: column; width: 100%; padding-top: 12px;}
+
+.mobileLoginInputWrapper {display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;}
+
+.mobileLoginInputWrapper input {width: 100%; border: none; background: transparent; outline: none; padding: 6px 0;
+                                border-bottom: 1px solid #1A1A1A; font-size: 12px; color: #1A1A1A;}
+
+.mobileLoginInputWrapper input::placeholder {color: #8E8E8E;}
+
+.mobileLoginActionBtn {width: 100%; height: 38px; border: none; background-color: rgba(26, 26, 26, 0.15);
+                       color: rgba(26, 26, 26, 0.8); border-radius: 2px; font-size: 12px; font-weight: 500;
+                       cursor: pointer; transition: all 0.2s ease; margin-bottom: 16px;}
+
+.mobileLoginActionBtn:active {background-color: rgba(26, 26, 26, 0.3); color: #1A1A1A;}
+
+.mobileLoginOptions {display: flex; justify-content: space-between; align-items: flex-start; font-size: 11px;
+                     margin-bottom: 16px;}
+
+.mobileLoginLinksRight {display: flex; flex-direction: column; align-items: flex-end; gap: 8px;}
+
+.mobileLoginFooter {display: flex; justify-content: space-between; align-items: center; font-size: 11px;}
+
+/* Mobile Cart */
+.mobileCartSection {display: flex; flex-direction: column; width: 100%; padding-top: 12px;}
+
+.mobileCartItemsGrid {display: flex; justify-content: center; gap: 16px; margin-bottom: 20px; min-height: 90px;}
+
+.mobileCartCard {display: flex; align-items: center; gap: 20px; width: 100%;}
+
+.mobileCartThumb {width: 58px; height: 84px; background-color: #D6D8DE; border-radius: 4px; overflow: hidden;
+                  flex-shrink: 0;}
+
+.mobileCartThumb img {width: 100%; height: 100%; object-fit: cover;}
+
+.mobileCartItemMeta {display: flex; flex-direction: column; justify-content: center; gap: 14px; flex: 1;
+                     min-height: 0; font-size: 10px; color: #1A1A1A;}
+
+.mobileSelectGroup {display: flex; align-items: center; gap: 20px; width: 100%;}
+
+.mobileCartItemsGrid {display: flex; gap: 16px; margin-bottom: 30px; width: 100%; min-height: 140px;}
+
+.mobileCartPrice {letter-spacing: 0.02em; font-weight: 500;}
+
+.mobileCartControls {display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;}
+
+.mobileCartPagination {display: flex; gap: 12px; font-size: 11px; font-weight: 500; color: rgba(26, 26, 26, 0.4);}
+
+.mobileCartPagination span {cursor: pointer;}
+
+.mobileCartPagination span.activePage {color: #1A1A1A;}
+
+.mobileCartDeleteBtn {width: 56px; height: 24px; border: none; background-color: rgba(26, 26, 26, 0.15);
+                      font-size: 10px; color: rgba(26, 26, 26, 0.8); border-radius: 2px; cursor: pointer;}
+
+.mobileCartDeleteBtn:active {background-color: rgba(26, 26, 26, 0.3);}
+
+.mobileCartDashedDivider {width: 100%; border-bottom: 1px dashed #A0A5AE; margin-bottom: 20px;}
+
+.mobileCartSummarySection {display: flex; justify-content: space-between; align-items: flex-start;}
+
+.mobileCartTotalWrapper {display: flex; flex-direction: column; gap: 10px;}
+
+.mobileTotalTitle {font-size: 10px; font-weight: 600; color: #1A1A1A;}
+
+.mobileTotalCount {font-size: 10px; color: rgba(26, 26, 26, 0.6); margin-top: 10px;}
+
+.mobileTotalPrice {font-size: 12px; letter-spacing: 0.02em; font-weight: 600; color: #1A1A1A;}
+
+.mobileCartCtaGroup {display: flex; flex-direction: column; gap: 6px; width: 140px; margin-top: 10px;}
+
+.mobileQuickBuyBtn {width: 100%; height: 28px; border: none; border-radius: 2px; cursor: pointer;
+                                        background-color: rgba(26, 26, 26, 0.15); color: rgba(26, 26, 26, 0.8);
+                                        font-size: 10px; transition: background-color 0.15s ease;}
+
+.mobileQuickBuyBtn:active {background-color: rgba(26, 26, 26, 0.3);}
+
+/* Mobile Benefits */
+.mobileBeneSection {display: flex; flex-direction: column; width: 100%; padding-top: 8px;}
+
+.mobileBeneTitleArea {text-align: center; cursor: pointer; margin-bottom: 12px;}
+
+.mobileBeneTitleArea span {font-size: 10px; letter-spacing: 0.05em; font-weight: 400; color: #1A1A1A;}
+
+.mobileBeneDashedDivider {width: 100%; border-bottom: 1px dashed #A0A5AE; margin-bottom: 20px;}
+
+.mobileBeneGrid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 8px; margin-bottom: 24px;}
+
+.mobileBeneTabBtn {display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+                   background: none; border: none; padding: 0; cursor: pointer;}
+
+.mobileBeneNum {font-size: 9px; color: rgba(26, 26, 26, 0.5); margin-bottom: 10px; transition: color 0.15s ease;}
+
+.mobileBeneLabel {font-size: 10px; color: rgba(26, 26, 26, 0.5); text-align: center; line-height: 1.2; word-break: keep-all;
+                  transition: color 0.15s ease;}
+
+.mobileBeneTabBtn.activeTab .mobileBeneNum, .mobileBeneTabBtn.activeTab .mobileBeneLabel {color: rgba(26, 26, 26, 0.8); 
+                                                                                          font-weight: 500;}
+
+.mobileBeneCard {width: 100%; min-height: 160px; background-color: #F0F0F0; padding: 24px 20px; display: flex;
+                 justify-content: center; align-items: center; text-align: center;}
+
+.mobileBeneCard p {font-size: 11px; letter-spacing: 10%; font-weight: 400; color: #1A1A1A; line-height: 1.7;
+                   margin: 0; word-break: keep-all;}

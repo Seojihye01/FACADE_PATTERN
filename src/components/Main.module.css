@@ -1,0 +1,77 @@
+.mainContainer {width: 100%; background-color: #F0F0F0; padding: 0; box-sizing: border-box;}
+
+.mainInner {width: 100%; margin: 0; padding: 0; display: grid; grid-template-columns: 2fr 1fr; align-items: stretch;
+            box-sizing: border-box;}
+
+.visualSection {display: flex; width: 100%; height: 650px; gap: 0; overflow: hidden;}
+
+.leftImageWrapper, .rightImageWrapper {position: relative; flex: 1; height: 100%; overflow: hidden;}
+
+.mainImg {width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.96) contrast(0.98) saturate(50%);}
+
+.ctaSection {background-color: #DDD; padding: 110px 40px 48px 40px; height: 100%; min-height: 650px; display: flex;
+             flex-direction: column; justify-content: space-between; text-decoration: none; color: #1A1A1A;
+             box-sizing: border-box; transition: background-color 0.2s ease; position: relative;}
+
+.ctaSection:hover {background-color: #afb4c3;}
+
+.ctaHeader {width: 100%; display: block; font-size: 12px; letter-spacing: 0.04em; font-weight: 700; color: #222; 
+            margin-bottom: 20px; position: relative;}
+
+.ctaCenter {display: flex; justify-content: space-between; align-items: center; width: 100%; margin: 30px 0;}
+
+.dateText, .seasonText {font-size: 9px; letter-spacing: 10%; color: #555; text-transform: uppercase;}
+
+.brandTitle {font-family: 'Century Gothic', sans-serif; font-size: 20px; letter-spacing: 0.18em; margin: 0;
+             text-align: center; color: #1A1A1A;}
+
+.ctaFooter {display: flex; flex-direction: column; gap: 24px;}
+
+.lookbookLink {display: flex; justify-content: space-between; align-items: center; font-family: 'Century Gothic', sans-serif;
+               font-size: 22px; letter-spacing: 0.1em;}
+
+.arrowContainer {flex: 1; display: flex; justify-content: flex-end; align-items: center; padding-left: 20px;}
+
+.arrowSvg {width: 100%; max-width: 180px; height: 12px;}
+
+.subDescription {font-size: 11px; letter-spacing: 10%; font-weight: 300; color: #555; line-height: 1.8; margin: 0;}
+
+/* Responsive Design */
+/* 1. Tablet (1024px 이하) */
+@media (max-width: 1024px) {
+
+  .mainInner {grid-template-columns: 1fr;}
+
+  .visualSection {height: 500px;}
+
+  .ctaSection {min-height: 420px; padding: 40px 32px;}
+
+  .arrowSvg {max-width: 140px;}
+
+}
+
+/* 2. Mobile(768px 이하) */
+@media (max-width: 768px) {
+
+  .visualSection {flex-direction: column; height: auto;}
+
+  .leftImageWrapper, .rightImageWrapper {height: 400px;}
+
+  .ctaSection {padding: 36px 24px;}
+
+  .brandTitle {font-size: 16px;}
+
+  .lookbookLink {font-size: 18px;}
+
+  .arrowSvg {max-width: 100px;}
+
+}
+
+/* 3. Compact (480px 이하) */
+@media (max-width: 480px) {
+
+  .leftImageWrapper, .rightImageWrapper {height: 320px;}
+
+  .ctaCenter {flex-direction: column; gap: 12px;}
+  
+}

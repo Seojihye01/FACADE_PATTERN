@@ -1,0 +1,60 @@
+.shopContainer {width: 100%; max-width: 1440px; margin: 0 auto; padding: 100px 24px 80px;}
+
+.shopHeader {display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;
+             border-bottom: 1px solid rgba(26, 26, 26, 0.1); padding-bottom: 16px;}
+
+.categoryDropdownWrapper, .sortWrapper {display: flex; align-items: center;}
+
+.categoryDropdownWrapper :global(.customSelectContainer),
+.sortWrapper :global(.customSelectContainer) {width: auto; min-width: max-content;}
+
+.categoryDropdownWrapper :global(.customSelectTrigger),
+.sortWrapper :global(.customSelectTrigger) {font-size: 11px; letter-spacing: 0.1em; font-weight: 500;
+                                            color: #1a1a1a; gap: 16px; white-space: nowrap;}
+
+.categoryDropdownWrapper :global(.customSelectTrigger span),
+.sortWrapper :global(.customSelectTrigger span) {text-overflow: unset; overflow: visible; white-space: nowrap;}
+
+.categoryDropdownWrapper :global(.customOptionList),
+.sortWrapper :global(.customOptionList) {top: calc(100% + 8px); background-color: #F0F0F0; overflow-y: auto;
+                                         z-index: 100; border: 1px solid rgba(26, 26, 26, 0.1); max-height: 280px;
+                                         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06); min-width: max-content;}
+
+.categoryDropdownWrapper :global(.customOptionItem),
+.sortWrapper :global(.customOptionItem) {font-size: 11px; letter-spacing: 0.05em; padding: 8px 14px; white-space: nowrap;}
+
+.categoryTitle {font-size: 11px; letter-spacing: 0.1em; font-weight: 500; color: #1a1a1a;}
+
+.sortSelect {background: none; border: none; outline: none; font-size: 11px; letter-spacing: 0.05em; color: #1a1a1a;
+             cursor: pointer;}
+
+.productGrid {display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 24px; row-gap: 56px;}
+
+.productCard {display: flex; flex-direction: column; cursor: pointer;}
+
+.imageWrapper {width: 100%; aspect-ratio: 3 / 4; background-color: #f4f4f5; overflow: hidden; margin-bottom: 16px;}
+
+.productImg {width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;}
+
+.productCard:hover .productImg {transform: scale(1.02);}
+
+.productMeta {display: flex; justify-content: space-between; align-items: baseline;}
+
+.productName {font-size: 12px; font-weight: 400; color: #1a1a1a; margin: 0;}
+
+.productPrice {font-size: 12px; font-weight: 500; color: #1a1a1a;}
+
+.emptyContainer {display: flex; flex-direction: column; justify-content: center; align-items: center;
+                 padding: 120px 0; text-align: center;}
+
+.emptyTitle {font-size: 13px; letter-spacing: 0.15em; font-weight: 500; color: #1a1a1a; margin-bottom: 8px;}
+
+.emptySub {font-size: 11px; letter-spacing: 0.02em; color: rgba(26, 26, 26, 0.4); margin: 0;}
+
+/* Responsive Design */
+/* 1.Mobile (768px 이하) */
+@media (max-width: 768px) {
+
+  .productGrid {grid-template-columns: repeat(2, 1fr); column-gap: 12px; row-gap: 36px;}
+  
+}

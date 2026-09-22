@@ -1,0 +1,96 @@
+.container {position: relative; width: 100%; height: 100vh; background-color: #d8d8d8; overflow: hidden;
+            box-sizing: border-box;}
+
+.noiseOverlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;
+               background-image: url('/media/Product/Collection_Background.png'); background-size: cover;
+               background-position: center; background-repeat: no-repeat; opacity: 0.9;}
+
+.linesOverlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none;}
+
+.line {stroke: rgba(0, 0, 0, 0.28); stroke-width: 0.75px;}
+
+.contentLayer {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 3;}
+
+.dateBox {position: absolute; top: 18%; left: 6.5%; width: 32.5%; height: 4.5%; display: flex; 
+          justify-content: flex-end; align-items: center; padding-right: 8px; box-sizing: border-box;}
+
+.dateText {font-size: 10px; letter-spacing: 0.08em; font-weight: 700; color: #111; white-space: nowrap;}
+
+.collectionBox {position: absolute; top: 33.5%; left: 6.5%; width: 32.5%; height: 7.5%; display: flex;
+                justify-content: flex-end; align-items: center; padding-right: 8px; box-sizing: border-box;}
+
+.collectionText {font-size: 12px; letter-spacing: 0.02em; color: #333; white-space: normal; word-break: keep-all;}
+
+.brandCard {position: absolute; top: 41%; left: 39.6%; width: 20.9%; height: 22%; cursor: pointer; display: flex;
+            justify-content: center; align-items: center; background-color: transparent;
+            transition: background-color 0.25s ease, transform 0.15s ease;}
+
+.brandLogo {font-family: 'Century Gothic', sans-serif; font-size: 15px; letter-spacing: 0.18em; font-weight: 500;
+            color: #1A1A1A; line-height: 1.3; user-select: none; text-align: center;}
+
+.mobileBr {display: none;}
+
+.brandCard:hover {background-color: rgba(0, 0, 0, 0.04);}
+
+.prevCollectionBox {position: absolute; top: 75.5%; height: 13%; left: 60.5%; width: 26.3%; display: flex;
+                    justify-content: flex-start; align-items: center; padding-left: 12px; box-sizing: border-box;}
+
+.prevCollectionBtn {background: none; border: none; display: inline-flex; align-items: center; gap: 6px;
+                    font-size: 11px; color: #222; cursor: pointer; 
+                    transition: transform 0.15s ease, opacity 0.2s ease;}
+
+.arrowIcon {width: 10px; height: 10px; display: block;}
+
+.prevCollectionBtn:hover {opacity: 0.8;}
+
+.prevCollectionBtn:active {transform: scale(0.94);}
+
+/* Responsive Design */
+/* 1. Mobile (768px 이하) */
+@media (max-width: 768px) {
+
+  .colLine1 {x1: 0%; x2: 0%;}
+
+  .colLine2 {x1: 38.5%; x2: 38.5%;}
+
+  .colLine3 {x1: 39%; x2: 39%;}
+
+  .colLine4 {x1: 59%; x2: 59%;}
+
+  .colLine5 {x1: 85%; x2: 85%;}
+
+  .colLine6 {x1: 85.8%; x2: 85.8%;}
+
+  .rowLine1 {y1: 27.5%; y2: 27.5%;}
+  
+  .rowLine2 {y1: 28%; y2: 28%;}
+  
+  .rowLine3 {y1: 45.5%; y2: 45.5%;}
+  
+  .rowLine4 {y1: 46%; y2: 46%;}
+  
+  .rowLine5 {y1: 66.5%; y2: 66.5%;}
+  
+  .rowLine6 {y1: 86.5%; y2: 86.5%;}
+  
+  .rowLine7 {y1: 87%; y2: 87%;}
+
+  .dateBox {justify-content: flex-end; padding-right: 6px;}
+
+  .dateText {font-size: 9px;}
+
+  .collectionBox {justify-content: flex-end; padding: 0 8px 0 0;}
+
+  .collectionText {font-size: 11px;}
+
+  .brandLogo {font-size: 12px; letter-spacing: 0.12em;}
+
+  .mobileBr {display: inline;}
+
+  .prevCollectionBox {justify-content: flex-start; padding-left: 6px;}
+
+  .prevCollectionBtn {font-size: 9.5px; gap: 4px; padding: 0;}
+
+  .arrowIcon {width: 8px; height: 8px;}
+
+}

@@ -1,0 +1,204 @@
+.catalogWrapper {width: 100%; min-height: calc(100vh - 80px); display: flex; justify-content: center; align-items: center;
+                 padding: 60px 20px; background-color: #E6E6E6; box-sizing: border-box; opacity: 0; 
+                 transform: translate3d(0, 60px, 0); will-change: transform, opacity;
+                 transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);}
+
+.fadeInUp {opacity: 1; transform: translate3d(0, 0, 0); 
+           transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);}
+
+.catalogCard {width: 100%; max-width: 980px; background-color: #EFEFEF; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+              display: flex; flex-direction: column; border-radius: 2px; overflow: hidden;}
+
+.mainCatalogSection {width: 100%; height: 600px; min-height: 600px; display: grid; grid-template-columns: 1fr 220px;
+                     box-sizing: border-box;}
+
+.leftSection {padding: 30px 40px 60px 40px; display: flex; flex-direction: column; border-right: 1px dashed #BBB;
+              box-sizing: border-box; position: relative; height: 600px;}
+
+.topHeader {display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;}
+
+.brandSubtitle {font-family: 'Century Gothic', sans-serif; font-size: 10px; color: #333;}
+
+.title {font-size: 24px; font-weight: 700; color: #1A1A1A; margin: 0;}
+
+.mainContent {display: grid; grid-template-columns: 1fr 1fr; gap: 30px; flex: 1;}
+
+.leftBrandCol {display: flex; flex-direction: column; align-items: flex-start;}
+
+.btnRow {display: flex; margin-bottom: 12px;}
+
+.viewDetailsBtn {background: rgba(207, 207, 207, 0.4); border: 1px solid #D5D5D5; padding: 4px 14px;
+                 font-size: 12px; color: #444; cursor: pointer; border-radius: 2px; transition: all 0.2s;}
+
+.viewDetailsBtn:hover {background: #CACACA;}
+
+.viewDetailsBtn:active {transform: scale(0.95);}
+
+.mainImgWrapper {width: 100%; height: 450px; overflow: hidden;}
+
+.mainImg {width: 100%; height: 100%; object-fit: cover;}
+
+.infoWrapper {display: flex; flex-direction: column; justify-content: center;}
+
+.productDetails {display: flex; flex-direction: column;}
+
+.lookRow {display: flex; gap: 25px; font-size: 11px; margin-bottom: 15px;}
+
+.lookLabel {color: #888;}
+
+.lookVal {font-weight: 600; color: #444;}
+
+.productName {font-size: 18px; color: #1A1A1A; line-height: 1.4; margin-bottom: 30px;}
+
+.detailMeta {display: flex; flex-direction: column; gap: 16px; font-size: 12px; line-height: 1.4;}
+
+.metaRow {color: #555;}
+
+.colorGroup {display: flex; align-items: center; gap: 10px; flex-wrap: wrap;}
+
+.colorOption {display: flex; align-items: center; gap: 6px; cursor: pointer;}
+
+.colorChip {width: 14px; height: 10px; display: inline-block; border: 1px solid rgba(0, 0, 0, 0.2);}
+
+.colorName {color: #555; transition: color 0.2s;}
+
+.underline {text-decoration: underline; text-underline-offset: 3px; color: #888;}
+
+.bannerMainContent {flex: 1; display: flex; justify-content: center; align-items: center;
+                    text-align: center; height: 100%;}
+
+.bannerMainInner {display: flex; flex-direction: column; align-items: center;}
+
+.bannerMainSub {font-size: 10px; letter-spacing: 0.05em; color: #555;}
+
+.bannerMainDivider {width: 16px; height: 1px; background-color: #333; margin: 16px 0;}
+
+.bannerMainTitle {font-size: 16px; font-weight: 700; color: #1A1A1A; margin: 0 0 16px 0;}
+
+.exploreBtn {background: rgba(207, 207, 207, 0.4); border: 1px solid #D5D5D5; border-radius: 2px; 
+             padding: 8px 20px; cursor: pointer; margin: 8px 0 24px 0; transition: all 0.25s ease;
+             font-size: 11px; letter-spacing: 0.08em; font-weight: 400; color: #333;}
+
+.exploreBtn:hover {background-color: #CACACA;}
+
+.exploreBtn:active {transform: scale(0.95);}
+
+.bannerMainDate {font-size: 9px; letter-spacing: 0.05em; font-weight: 700; color: #222;}
+
+.bottomCatalogControl {position: absolute; bottom: 20px; right: 30px; gap: 10px; display: flex; 
+                       flex-direction: column; align-items: flex-end;}
+
+.catalogLabel {font-size: 10px; color: #888;}
+
+.pageButtons {display: flex; gap: 10px;}
+
+.pageBtn {background: none; border: none; padding: 0; font-size: 13px; font-weight: 300;
+          color: #AAA; cursor: pointer; transition: color 0.2s;}
+
+.pageBtn:hover {color: #1A1A1A;}
+
+.activePage {font-weight: 500; color: #1A1A1A;}
+
+.rightSection {background-color: #EFEFEF; display: flex; flex-direction: column; height: 600px;       
+               box-sizing: border-box; overflow: hidden;}
+
+.flyerCard, .brandBannerCard {position: relative; flex: 1; height: 0; min-height: 0; background-color: #EFEFEF;
+                              display: flex; flex-direction: row; cursor: grab; box-sizing: border-box;
+                              z-index: 1; border-bottom: 1px solid #E0E0E0;
+                              transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;}
+
+.flyerCard:active, .brandBannerCard:active {cursor: grabbing;}
+
+.flyerCard:last-child, .brandBannerCard:last-child {border-bottom: none;}
+
+.flyerHeader {width: 32px; min-width: 32px; height: 100%; top: 0; left: 0; background-color: #EFEFEF; 
+              display: flex; justify-content: center; align-items: flex-end; box-sizing: border-box; 
+              position: relative; padding-bottom: 30px;}
+
+.flyerNo {font-size: 12px; letter-spacing: 1px; color: #666; writing-mode: sideways-lr; text-orientation: mixed;}
+
+.flyerBody {flex: 1; height: 100%; padding: 12px; box-sizing: border-box; display: flex;
+            justify-content: center; align-items: center; background-color: #F7F7F8; overflow: hidden;}
+
+.flyerImg {width: 100%; height: 100%; object-fit: cover;}
+
+.flyerNameText {display: none;}
+
+.brandBannerCard {position: relative; flex: 1; height: 0; min-height: 0; background-color: #EFEFEF; display: flex; 
+                  justify-content: center; align-items: center; box-sizing: border-box;
+                  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;}
+
+.bannerSimpleText {font-size: 12px; letter-spacing: 0.08em; font-weight: 500; color: #333;
+                   font-family: 'Century Gothic', sans-serif;}
+
+.tornOff {transform: translateX(20px) rotate(-1.5deg); z-index: 10; box-shadow: -8px 8px 16px rgba(0, 0, 0, 0.12);}
+
+/* Responsive Design */
+/* 1. Tablet (768px 이하) */
+@media (max-width: 768px) {
+
+  .catalogWrapper {padding: 16px 10px;}
+
+  .mainCatalogSection {grid-template-columns: 1fr; min-height: auto; height: auto;}
+
+  .leftSection {border-right: none; border-bottom: 1px dashed #BBB; padding: 20px 16px 40px 16px; height: auto;
+                min-height: 480px;}
+
+  .brandSubtitle {font-size: 9px;}
+
+  .title {font-size: 20px;}
+
+  .mainContent {display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: center;}
+
+  .viewDetailsBtn {font-size: 11px;}
+
+  .mainImgWrapper {width: 100%; height: 340px; display: flex; justify-content: center; align-items: center;
+                   background-color: #F5F5F5; border-radius: 4px; overflow: hidden;}
+
+  .mainImg {width: 100%; height: 100%; object-fit: cover;}
+
+  .bannerMainContent {min-height: 340px;}
+
+  .infoWrapper {padding-top: 0;}
+
+  .productName {font-size: 16px; margin-bottom: 50px;} 
+
+  .detailMeta {font-size: 10px;}
+
+  .rightSection {display: flex; flex-direction: row; height: auto; padding: 0; gap: 0; background-color: #EFEFEF;
+                 border-top: 1px solid #E0E0E0;}
+
+  .flyerCard, .brandBannerCard {flex: 1; height: 90px; min-height: 90px; flex-direction: column; border-bottom: none;
+                                border-right: 1px solid #E0E0E0; background-color: #EFEFEF;}
+
+  .flyerHeader {width: 100%; min-width: 100%; height: 28px; border-right: none; padding: 0; justify-content: center;
+                align-items: center;}
+
+  .flyerNo {writing-mode: horizontal-tb; transform: none; font-size: 10px; line-height: 1;}
+
+  .flyerBody {padding: 8px 10px; display: flex; flex-direction: column; justify-content: center; gap: 2px;}
+ 
+  .flyerImg {display: none;}
+
+  .flyerNameText {display: block; font-size: 11px; color: #1A1A1A; white-space: nowrap; overflow: hidden; 
+                  text-overflow: ellipsis; text-align: center; word-break: keep-all;}
+
+  .brandBannerCard {display: flex; justify-content: center; align-items: center;}
+
+  .tornOff {transform: translateY(8px); z-index: 10; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);}
+  
+  .bottomCatalogControl {right: 16px; bottom: 12px;}
+
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+
+  .topHeader {flex-direction: column; align-items: flex-start; gap: 6px;}
+
+  .title {font-size: 20px;}
+
+  .mainImgWrapper {height: 340px;}
+  
+}
+
