@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import "./App.css";
 
 import Main from './components/Main';
@@ -10,8 +10,7 @@ import { Footer } from './components/Footer';
 import { CartProvider } from './CartContext'; // 1. CartProvider 불러오기
 
 function App() {
-  const location = useLocation();
-
+  
   return (
     /* 2. 전체를 CartProvider로 감싸줍니다 */
     <CartProvider>

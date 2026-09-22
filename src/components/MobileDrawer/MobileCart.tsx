@@ -18,14 +18,6 @@ interface CartItem extends Product {
   selectedSize: string;
 }
 
-// PRODUCTS_DATA 기반 초기 장바구니 데이터 설정
-const initialCartItems: CartItem[] = PRODUCTS_DATA.slice(0, 5).map((product, index) => ({
-  ...product,
-  id: `cart-${product.lookNo}-${index}`,
-  quantity: 1,
-  selectedColor: product.colour[0] || 'Default',
-  selectedSize: product.size[0] || 'FREE',
-}));
 
 export const MobileCart: React.FC<MobileCartProps> = ({ onClose, onCountChange }) => {
   const navigate = useNavigate();

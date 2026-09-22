@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { PRODUCTS_DATA, type Product, type ProductColor } from './data/products';
 
 export interface CartItem extends Product {

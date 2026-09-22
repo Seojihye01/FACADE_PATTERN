@@ -18,15 +18,6 @@ interface CartItem extends Product {
   selectedSize: string;
 }
 
-// PRODUCTS_DATA의 상위 5개 상품을 장바구니 초기 데이터로 가공
-const initialCartItems: CartItem[] = PRODUCTS_DATA.slice(0, 5).map((product, index) => ({
-  ...product,
-  id: `cart-${product.lookNo}-${index}`,
-  quantity: 1,
-  selectedColor: product.colour[0] || 'Default',
-  selectedSize: product.size[0] || 'FREE',
-}));
-
 export const CartModal: React.FC<CartModalProps> = ({ onClose, onCountChange }) => {
   const navigate = useNavigate();
   const [cartPage, setCartPage] = useState<number>(1);
@@ -39,6 +30,7 @@ export const CartModal: React.FC<CartModalProps> = ({ onClose, onCountChange }) 
 
   // 장바구니 내 상품 클릭 이벤트
   const handleGoToDetail = (productId: string) => {
+    onClose();
     navigate(`/product/${productId}`);
   };
   // 상위 Header로 카운트 전달
@@ -121,10 +113,7 @@ export const CartModal: React.FC<CartModalProps> = ({ onClose, onCountChange }) 
 
             <div
               className={styles.cartThumb}
-              onClick={() => {
-                onClose();
-                navigate(`/product/${item.lookNo}`);
-              }}
+              onClick={() => handleGoToDetail(item.lookNo)}
             >
               <img src={item.imgUrl} alt={item.name} />
             </div>

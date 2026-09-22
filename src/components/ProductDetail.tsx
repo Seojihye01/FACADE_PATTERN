@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import { PRODUCTS_DATA, type Product, type ProductColor } from '../data/products';
+import { PRODUCTS_DATA, type ProductColor } from '../data/products';
 import { useCart } from '../CartContext'; 
 import styles from './ProductDetail.module.css';
 import { CartModalAlert } from './CartModalAlert';
