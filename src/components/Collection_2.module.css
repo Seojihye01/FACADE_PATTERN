@@ -53,7 +53,7 @@
 
   .logoCard {display: flex; order: -1; aspect-ratio: 3 / 4; animation-delay: 0s !important;}
 
-  .animated .imageCard.activeCard {transform: translateY(-4px);}
+  .animated .imageCard.activeCard {transform: translateY(0px);}
 
   .infoFooter {margin-top: 32px;}
 

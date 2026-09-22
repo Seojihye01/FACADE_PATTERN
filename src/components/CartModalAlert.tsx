@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import styles from './CartModalAlert.module.css';
 
 interface CartModalAlertProps {
@@ -32,7 +33,7 @@ export const CartModalAlert: React.FC<CartModalAlertProps> = ({
 
   if (!isOpen) return null;
 
-  return (
+  return ReactDOM.createPortal(
     <div className={styles.toastContainer}>
       <div className={styles.toastHeader}>
         <span className={styles.badge}>Added To Cart</span>
@@ -50,6 +51,7 @@ export const CartModalAlert: React.FC<CartModalAlertProps> = ({
           </p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
