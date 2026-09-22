@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../Header.module.css';
-import { PRODUCTS_DATA, type Product, type ProductColor } from '../../data/products';
 import { useCart } from '../../CartContext';
 import { CustomSelect } from '../CustomSelect';
 
@@ -9,15 +8,6 @@ interface MobileCartProps {
   onClose: () => void;
   onCountChange?: (count: number) => void;
 }
-
-// CartItem 타입 정의
-interface CartItem extends Product {
-  id: string;
-  quantity: number;
-  selectedColor: ProductColor | string;
-  selectedSize: string;
-}
-
 
 export const MobileCart: React.FC<MobileCartProps> = ({ onClose, onCountChange }) => {
   const navigate = useNavigate();

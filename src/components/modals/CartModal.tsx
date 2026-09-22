@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../Header.module.css';
-import { PRODUCTS_DATA, type Product, type ProductColor } from '../../data/products';
 import { useCart } from '../../CartContext';
 import { CustomSelect } from '../CustomSelect';
 
 interface CartModalProps {
   onClose: () => void;
   onCountChange?: (count: number) => void;
-}
-
-// 장바구니 아이템 타입 (Product 데이터 확장)
-interface CartItem extends Product {
-  id: string;
-  quantity: number;
-  selectedColor: ProductColor | string;
-  selectedSize: string;
 }
 
 export const CartModal: React.FC<CartModalProps> = ({ onClose, onCountChange }) => {

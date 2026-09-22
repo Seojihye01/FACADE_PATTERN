@@ -8,12 +8,7 @@ interface SearchModalProps {
   onCategoryClick?: (categoryPath: string) => void;
 }
 
-const CATEGORY_MAP: Record<string, string> = {
-  'Outerwear': 'Outerwear',
-  'Signature Coat': 'Outerwear', 
-  'Leather Boots': 'Shoes',      
-  'Minimal Bag': 'Bags',        
-};
+
 
 export const SearchModal: React.FC<SearchModalProps> = ({ onClose, onCategoryClick }) => {
   const navigate = useNavigate();
@@ -35,7 +30,6 @@ export const SearchModal: React.FC<SearchModalProps> = ({ onClose, onCategoryCli
 
   // Trending 키워드 클릭 시 해당 카테고리/검색 페이지로 이동
   const handleTrendingClick = (keyword: string) => {
-    const targetCategory = CATEGORY_MAP[keyword] || keyword;
     
     if (onCategoryClick) {
       onCategoryClick(keyword);
