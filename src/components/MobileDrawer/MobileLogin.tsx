@@ -25,17 +25,17 @@ export const MobileLogin: React.FC = () => {
         </div>
 
         <div className={styles.mobileLoginLinksRight}>
-          <span className={styles.textLink}>아이디/비밀번호 찾기</span>
-          <span className={styles.textLink}>회원가입</span>
+          <span className={styles.textLink} onTouchStart={() => {}}>아이디/비밀번호 찾기</span>
+          <span className={styles.textLink} onTouchStart={() => {}}>회원가입</span>
         </div>
       </div>
 
       <div className={styles.mobileLoginFooter}>
         <div className={styles.socialButtons}>
-          <span className={styles.textLink}>네이버 로그인</span>
-          <span className={styles.textLink}>카카오 로그인</span>
+          <span className={styles.textLink} onTouchStart={() => {}}>네이버 로그인</span>
+          <span className={styles.textLink} onTouchStart={() => {}}>카카오 로그인</span>
         </div>
-        <span className={styles.textLink}>비회원 주문조회</span>
+        <span className={styles.textLink} onTouchStart={() => {}}>비회원 주문조회</span>
       </div>
     </div>
   );

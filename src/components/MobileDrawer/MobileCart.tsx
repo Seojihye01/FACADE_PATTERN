@@ -143,7 +143,7 @@ export const MobileCart: React.FC<MobileCartProps> = ({ onClose, onCountChange }
         </div>
 
         <div className={styles.mobileCartCtaGroup}>
-          <button className={styles.mobileQuickBuyBtn}>Quick Buy</button>
+          <button className={styles.mobileQuickBuyBtn}>Buy</button>
         </div>
       </div>
     </div>

@@ -157,7 +157,7 @@ export const CartModal: React.FC<CartModalProps> = ({ onClose, onCountChange }) 
         </div>
 
         <div className={styles.cartCtaWrapper}>
-          <button className={styles.quickBuyBtn}>Quick Buy</button>
+          <button className={styles.quickBuyBtn}>Buy</button>
         </div>
       </div>
     </div>
@@ -303,7 +303,7 @@ export const MobileCart: React.FC<MobileCartProps> = ({ onClose, onCountChange }
         </div>
 
         <div className={styles.mobileCartCtaGroup}>
-          <button className={styles.mobileQuickBuyBtn}>Quick Buy</button>
+          <button className={styles.mobileQuickBuyBtn}>Buy</button>
         </div>
       </div>
     </div>

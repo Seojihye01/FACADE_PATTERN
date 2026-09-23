@@ -1,5 +1,4 @@
-.headerContainer {width: 100%; height: 72px; background-color: #E1E3E8; position: fixed; top: 0; left: 0;
-                  z-index: 100; font-family: 'Josefin Sans', sans-serif; color: #1A1A1A;}
+.headerContainer {width: 100%; height: 72px; background-color: #E1E3E8; position: fixed; top: 0; left: 0; z-index: 100;}
 
 .headerInner {margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 100%;
               padding: 0 24px;}
@@ -10,14 +9,14 @@
 @media (max-width: 768px) and (min-width: 481px) { .headerInner { max-width: 768px; } }
 @media (max-width: 480px) { .headerInner { max-width: 480px; } }
 
-.logo {font-family: 'Josefin Sans', AppleGothic, sans-serif; cursor: pointer; letter-spacing: 10%; white-space: nowrap;}
+.logo {font-family: 'Josefin Sans', sans-serif; cursor: pointer; letter-spacing: 10%; font-weight: 400; white-space: nowrap;}
 
 .desktopNav {display: flex; justify-content: space-between; align-items: center; width: 100%; margin-left: 160px;}
 
 .leftNav {display: flex; align-items: center; gap: 60px;}
 
 .leftNav button, .rightNav button {background: none; border: none; margin: 0 12px; cursor: pointer; padding: 0;
-                                   color: #1A1A1A; font-size: 14px; letter-spacing: 5%; font-weight: 300;}
+                                   font-size: 14px; letter-spacing: 5%; font-weight: 300;}
 
 .leftNav button.activeBtn, .rightNav button.activeBtn {font-weight: 500;}
 
@@ -34,9 +33,9 @@
                                      letter-spacing: 10%; font-weight: 400; color: rgba(26, 26, 26, 0.4); 
                                      cursor: pointer; transition: opacity 0.15s ease;}
 
-.subCategoryModal {padding: 20px 24px 28px 352px; gap: 25px; display: flex; flex-direction: column;}
+.subCategoryModal {padding: 20px 24px 28px 360px; gap: 25px; display: flex; flex-direction: column;}
 
-.subCategoryGrid {padding: 20px 24px 28px 510px; gap: 25px 32px; display: flex; gap: 48px;}
+.subCategoryGrid {padding: 20px 24px 28px 518px; gap: 25px 32px; display: flex; gap: 48px;}
 
 .categoryColumn {display: flex; flex-direction: column; gap: 25px; min-width: 140px;}
 
@@ -93,7 +92,7 @@
 
 .searchBody {display: flex; gap: 32px;}
 
-.recommendSection {flex: 1.5; display: flex; flex-direction: column;}
+.recommendSection {flex: 1.5; display: flex; flex-direction: column; }
 
 .recommendSection h4, .trendingSection h4 {font-size: 12px; letter-spacing: 5%; font-weight: 500; color: #666;
                                            margin-bottom: 16px;}
@@ -173,6 +172,8 @@
 
 .textLink:hover {color: #555; text-decoration: underline; text-underline-offset: 3px;}
 
+.textLink:active {color: #555; text-decoration: underline; text-underline-offset: 3px;}
+
 /* Cart Modal */
 
 .cartModal {display: flex; align-items: flex-start; width: 100%; height: 100%; padding-top: 32px; color: #1A1A1A;}
@@ -180,7 +181,8 @@
 .cartLeftCol {width: 80px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px;}
 
 .cartDeleteBtn {width: 64px; height: 28px; border: none; background-color: rgba(26, 26, 26, 0.15); cursor: pointer; margin: 0;
-                color: rgba(26, 26, 26, 0.8); font-size: 11px; border-radius: 2px; transition: background-color 0.15s ease;}
+                color: rgba(26, 26, 26, 0.8); font-size: 11px; font-weight: 500; transition: background-color 0.15s ease;
+                border-radius: 2px; }
 
 .cartDeleteBtn:active {background-color: rgba(26, 26, 26, 0.3);}
 
@@ -252,9 +254,8 @@
 
 .cartCtaWrapper {width: 100%; display: flex; flex-direction: column; gap: 8px;}
 
-.quickBuyBtn {width: 100%; height: 32px; border: none; background-color: rgba(26, 26, 26, 0.15);
-                            color: rgba(26, 26, 26, 0.8); font-size: 11px; cursor: pointer; border-radius: 2px;
-                            transition: background-color 0.15s ease;}
+.quickBuyBtn {width: 100%; height: 32px; border: none; background-color: rgba(26, 26, 26, 0.15); color: rgba(26, 26, 26, 0.8);
+              font-size: 11px; font-weight: 500; cursor: pointer; border-radius: 2px; transition: background-color 0.15s ease;}
 
 .quickBuyBtn:active {background-color: rgba(26, 26, 26, 0.3);}
 
@@ -323,7 +324,7 @@
 
 .mobileSubList {display: flex; flex-direction: column; gap: 15px; padding-left: 12px; margin-top: 8px;}
 
-.mobileSubList p {font-size: 12px; color: rgba(26, 26, 26, 0.5); cursor: pointer; margin: 0;}
+.mobileSubList p {font-size: 12px; font-weight: 400; color: rgba(26, 26, 26, 0.5); cursor: pointer; margin: 0;}
 
 .mobileSubList p:hover {color: #1A1A1A;}
 
@@ -340,7 +341,8 @@
 .mobileSearchInputWrapper input {width: 100%; border: none; background: transparent; outline: none; padding: 4px 0;
                                  font-size: 14px;}
 
-.mobileSectionTitle {font-size: 11px; letter-spacing: 5%; color: rgba(26, 26, 26, 0.6); display: block; margin-bottom: 20px;}
+.mobileSectionTitle {font-size: 11px; letter-spacing: 5%; font-weight: 500; color: rgba(26, 26, 26, 0.6); display: block; 
+                     margin-bottom: 20px;}
 
 .mobileRecommendSection {margin-bottom: 30px;}
 
@@ -396,6 +398,8 @@
 
 .mobileLoginFooter {display: flex; justify-content: space-between; align-items: center; font-size: 11px;}
 
+.mobileLoginFooter .textLink:active {color: #555; text-decoration: underline; text-underline-offset: 3px;}
+
 /* Mobile Cart */
 .mobileCartSection {display: flex; flex-direction: column; width: 100%; padding-top: 12px;}
 
@@ -425,8 +429,8 @@
 
 .mobileCartPagination span.activePage {color: #1A1A1A;}
 
-.mobileCartDeleteBtn {width: 56px; height: 24px; border: none; background-color: rgba(26, 26, 26, 0.15);
-                      font-size: 10px; color: rgba(26, 26, 26, 0.8); border-radius: 2px; cursor: pointer;}
+.mobileCartDeleteBtn {width: 56px; height: 24px; border: none; cursor: pointer; background-color: rgba(26, 26, 26, 0.15); 
+                      font-size: 10px; font-weight: 500; color: rgba(26, 26, 26, 0.8); border-radius: 2px;}
 
 .mobileCartDeleteBtn:active {background-color: rgba(26, 26, 26, 0.3);}
 
@@ -444,9 +448,8 @@
 
 .mobileCartCtaGroup {display: flex; flex-direction: column; gap: 6px; width: 140px; margin-top: 10px;}
 
-.mobileQuickBuyBtn {width: 100%; height: 28px; border: none; border-radius: 2px; cursor: pointer;
-                                        background-color: rgba(26, 26, 26, 0.15); color: rgba(26, 26, 26, 0.8);
-                                        font-size: 10px; transition: background-color 0.15s ease;}
+.mobileQuickBuyBtn {width: 100%; height: 28px; border: none; border-radius: 2px; cursor: pointer; background-color: rgba(26, 26, 26, 0.15); 
+                    color: rgba(26, 26, 26, 0.8); font-size: 10px; font-weight: 500; transition: background-color 0.15s ease;}
 
 .mobileQuickBuyBtn:active {background-color: rgba(26, 26, 26, 0.3);}
 
