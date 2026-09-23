@@ -331,7 +331,7 @@
 .mobileSubList p:active {color: #1A1A1A; text-decoration: underline; text-underline-offset: 4px;}
 
 .mobileLogo {text-align: left; margin-top: auto; font-family: 'Josefin Sans', AppleGothic, sans-serif; font-size: 20px;
-             letter-spacing: 10%; cursor: pointer; flex-shrink: 0;}
+             letter-spacing: 10%; font-weight: 300; cursor: pointer; flex-shrink: 0;}
 
 /* Mobile Search */
 .mobileSearchSection {display: flex; flex-direction: column;}
@@ -376,7 +376,13 @@
 .mobileTrendingGrid span:active {transform: scale(0.95);}
 
 /* Mobile Login */
-.mobileLoginSection {display: flex; flex-direction: column; width: 100%; padding-top: 12px;}
+.mobileLoginSection {display: flex; flex-direction: column; width: 100%; padding-top: 12px; margin-bottom: 10px;}
+
+.mobileLoginSection .textLink {cursor: pointer; color: #555; text-decoration: none;
+                               transition: color 0.15s ease, text-decoration 0.15s ease;}
+
+.mobileLoginSection .textLink:hover,
+.mobileLoginSection .textLink:active {color: #555; text-decoration: underline !important; text-underline-offset: 3px;}
 
 .mobileLoginInputWrapper {display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;}
 
@@ -394,18 +400,18 @@
 .mobileLoginOptions {display: flex; justify-content: space-between; align-items: flex-start; font-size: 11px;
                      margin-bottom: 16px;}
 
-.mobileLoginLinksRight {display: flex; flex-direction: column; align-items: flex-end; gap: 10px;}
+.mobileLoginLinksRight {display: flex; flex-direction: column; align-items: flex-end; gap: 13px;}
 
 .mobileLoginFooter {display: flex; justify-content: space-between; align-items: center; font-size: 11px;}
-
-.mobileLoginFooter .textLink:active {color: #555; text-decoration: underline; text-underline-offset: 3px;}
 
 /* Mobile Cart */
 .mobileCartSection {display: flex; flex-direction: column; width: 100%; padding-top: 12px;}
 
 .mobileCartItemsGrid {display: flex; justify-content: center; gap: 16px; margin-bottom: 20px; min-height: 90px;}
 
-.mobileCartCard {display: flex; align-items: center; gap: 20px; width: 100%;}
+.mobileCartCard {display: flex; align-items: center; gap: 20px; width: 100%; box-sizing: border-box;}
+
+.mobileCartCard .checkboxBox {flex-shrink: 0;}
 
 .mobileCartThumb {width: 58px; height: 84px; background-color: #D6D8DE; border-radius: 4px; overflow: hidden;
                   flex-shrink: 0;}
@@ -413,7 +419,7 @@
 .mobileCartThumb img {width: 100%; height: 100%; object-fit: cover;}
 
 .mobileCartItemMeta {display: flex; flex-direction: column; justify-content: center; gap: 14px; flex: 1;
-                     min-height: 0; font-size: 10px; color: #1A1A1A;}
+                     min-width: 0; min-height: 0; font-size: 10px;}
 
 .mobileSelectGroup {display: flex; align-items: center; gap: 20px; width: 100%;}
 
@@ -475,7 +481,7 @@
 .mobileBeneTabBtn.activeTab .mobileBeneNum, .mobileBeneTabBtn.activeTab .mobileBeneLabel {color: rgba(26, 26, 26, 0.8); 
                                                                                           font-weight: 500;}
 
-.mobileBeneCard {width: 100%; min-height: 160px; background-color: #F0F0F0; padding: 24px 20px; display: flex;
+.mobileBeneCard {width: 100%; min-height: 170px; background-color: #F0F0F0; padding: 24px 20px; display: flex;
                  justify-content: center; align-items: center; text-align: center;}
 
 .mobileBeneCard p {font-size: 11px; letter-spacing: 10%; font-weight: 400; color: #1A1A1A; line-height: 1.7;
