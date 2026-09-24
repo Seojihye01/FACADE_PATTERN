@@ -295,7 +295,7 @@
 .mobileDrawerOverlay {position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.4);
                       z-index: 300; display: flex; justify-content: flex-end;}
 
-.mobileDrawerPanel {position: relative; width: 420px; height: 680px; background-color: #E1E3E8; padding: 40px 32px 32px 32px;
+.mobileDrawerPanel {position: relative; width: 100%; max-width: 420px; height: 680px; background-color: #E1E3E8; padding: 40px 32px 32px 32px;
                     display: flex; flex-direction: column; box-sizing: border-box; box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);}
 
 .mobileTopNav {display: flex; justify-content: space-between; margin-top: 24px; margin-bottom: 80px; flex-shrink: 0;}
