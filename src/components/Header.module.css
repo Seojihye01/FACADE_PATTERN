@@ -481,7 +481,7 @@
 .mobileBeneTabBtn.activeTab .mobileBeneNum, .mobileBeneTabBtn.activeTab .mobileBeneLabel {color: rgba(26, 26, 26, 0.8); 
                                                                                           font-weight: 500;}
 
-.mobileBeneCard {width: 100%; min-height: 170px; background-color: #F0F0F0; padding: 24px 20px; display: flex;
+.mobileBeneCard {width: 100%; min-height: 180px; background-color: #F0F0F0; padding: 24px 20px; display: flex;
                  justify-content: center; align-items: center; text-align: center;}
 
 .mobileBeneCard p {font-size: 11px; letter-spacing: 10%; font-weight: 400; color: #1A1A1A; line-height: 1.7;
