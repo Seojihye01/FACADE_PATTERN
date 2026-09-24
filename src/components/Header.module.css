@@ -207,9 +207,9 @@
 .qtyControl {display: flex; align-items: center; gap: 6px; font-size: 11px;}
 
 .qtyControl button {width: 18px; height: 18px; background: transparent; cursor: pointer; padding: 0; display: flex;
-                    justify-content: center; align-items: center; font-size: 11px; transform-origin: center center;
-                    transition: transform 0.15s ease, color 0.15s ease; line-height: 1; -webkit-appearance: none;
-                    -moz-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent;}
+                    justify-content: center; align-items: center; font-size: 11px; transform-origin: center center; border: none;
+                    transition: transform 0.15s ease, color 0.15s ease; line-height: 1; -webkit-appearance: none; outline: none;
+                    -moz-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; color: #1A1A1A;}
 
 .qtyControl button:active {transform: scale(0.9);}
 

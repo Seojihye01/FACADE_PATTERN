@@ -148,6 +148,8 @@ export const Shop: React.FC = () => {
                       src={displayImg}
                       alt={product.name}
                       className={styles.productImg}
+                      loading="lazy"    
+                      decoding="async"
                     />
                   </div>
 
