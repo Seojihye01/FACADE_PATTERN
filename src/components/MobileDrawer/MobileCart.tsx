@@ -85,9 +85,9 @@ export const MobileCart: React.FC<MobileCartProps> = ({ onClose, onCountChange }
 
             <div className={styles.mobileCartItemMeta}>
               <div className={styles.qtyControl}>
-                <button type="button" onClick={() => handleQuantityChange(item.id, item.quantity, -1)}>-</button>
+                <button type="button" onClick={() => handleQuantityChange(item.id, item.quantity, -1)}>&#8722;</button>
                 <span>{item.quantity}</span>
-                <button type="button" onClick={() => handleQuantityChange(item.id, item.quantity, 1)}>+</button>
+                <button type="button" onClick={() => handleQuantityChange(item.id, item.quantity, 1)}>&#43;</button>
               </div>
 
               <div className={styles.mobileSelectGroup}>
