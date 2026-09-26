@@ -57,9 +57,9 @@
 
   .colLine4 {x1: 59%; x2: 59%;}
 
-  .colLine5 {x1: 85%; x2: 85%;}
+  .colLine5 {x1: 88%; x2: 88%;}
 
-  .colLine6 {x1: 85.8%; x2: 85.8%;}
+  .colLine6 {x1: 88.8%; x2: 88.8%;}
 
   .rowLine1 {y1: 27.5%; y2: 27.5%;}
   
@@ -87,12 +87,11 @@
 
   .mobileBr {display: inline;}
 
-  .prevCollectionBox {justify-content: flex-start; padding-left: 4px;}
+  .prevCollectionBox {justify-content: flex-start; padding-left: 4px; width: auto;}
 
-  .prevCollectionBtn {font-size: 9px; gap: 2px; padding: 0; display: flex; flex-direction: column; 
-                      justify-content: center; align-items: center;}
+  .prevCollectionBtn {font-size: 9px; gap: 2px; padding: 0;}
 
-  .prevCollectionBtn span {white-space: nowrap; line-height: 1;}
+  .prevCollectionBtn span {white-space: nowrap;}
 
   .arrowIcon {width: 8px; height: 8px;}
 
