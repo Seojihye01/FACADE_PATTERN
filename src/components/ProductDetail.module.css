@@ -15,10 +15,10 @@
 
 .imageList::-webkit-scrollbar {display: none;}
 
-.imageWrapper {width: 100%; aspect-ratio: 3 / 4; height: 100%; scroll-snap-align: start; scroll-snap-stop: always;
+.imageWrapper {width: 100%; height: 100%; scroll-snap-align: start; scroll-snap-stop: always;
                flex-shrink: 0; margin-bottom: 20px;}
 
-.imageWrapper img {width: 100%; height: 100%; object-fit: cover; display: block;}
+.imageWrapper img {width: 100%; height: 100%; object-fit: contain; display: block;}
 
 .rightContentSection {width: 62%; position: relative;}
 
