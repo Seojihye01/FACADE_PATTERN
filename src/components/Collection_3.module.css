@@ -134,8 +134,8 @@
 .tornOff {transform: translateX(20px) rotate(-1.5deg); z-index: 10; box-shadow: -8px 8px 16px rgba(0, 0, 0, 0.12);}
 
 /* Responsive Design */
-/* 1. Tablet (768px 이하) */
-@media (max-width: 768px) {
+/* 1. Tablet (1024px 이하) */
+@media (max-width: 1024px) {
 
   .catalogWrapper {padding: 16px 10px;}
 
@@ -152,10 +152,10 @@
 
   .viewDetailsBtn {font-size: 11px;}
 
-  .mainImgWrapper {width: 100%; height: 340px; display: flex; justify-content: center; align-items: center;
+  .mainImgWrapper {width: 100%; height: auto; display: flex; justify-content: center; align-items: center;
                    background-color: #F5F5F5; border-radius: 2px; overflow: hidden;}
 
-  .mainImg {width: 100%; height: 100%; object-fit: cover;}
+  .mainImg {width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover;}
 
   .bannerMainContent {min-height: 340px;}
 

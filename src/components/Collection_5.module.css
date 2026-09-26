@@ -26,7 +26,7 @@
             transition: background-color 0.25s ease, transform 0.15s ease;}
 
 .brandLogo {font-family: 'Josefin Sans', sans-serif; font-size: 15px; letter-spacing: 0.18em; font-weight: 500;
-            color: #1A1A1A; line-height: 1.3; user-select: none; text-align: center;}
+            color: #1A1A1A; line-height: 1.6; user-select: none; text-align: center;}
 
 .mobileBr {display: none;}
 
@@ -79,7 +79,7 @@
 
   .dateText {font-size: 9px;}
 
-  .collectionBox {justify-content: flex-end; padding: 0 8px 0 0;}
+  .collectionBox {justify-content: flex-end; padding: 0 6px 0 0;}
 
   .collectionText {font-size: 11px;}
 
@@ -87,10 +87,12 @@
 
   .mobileBr {display: inline;}
 
-  .prevCollectionBox {justify-content: flex-start; padding-left: 6px;}
+  .prevCollectionBox {justify-content: flex-start; padding-left: 6px; width: auto;}
 
-  .prevCollectionBtn {font-size: 9.5px; gap: 4px; padding: 0;}
+  .prevCollectionBtn {font-size: 9px; gap: 4px; padding: 0;}
 
-  .arrowIcon {width: 8px; height: 8px;}
+  .prevCollectionBtn span {white-space: nowrap;}
+
+  .arrowIcon {width: 8px; height: 8px; flex-shrink: 0;}
 
 }
