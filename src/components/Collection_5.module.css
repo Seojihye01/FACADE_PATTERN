@@ -57,9 +57,9 @@
 
   .colLine4 {x1: 59%; x2: 59%;}
 
-  .colLine5 {x1: 95%; x2: 95%;}
+  .colLine5 {x1: 88%; x2: 88%; transform: translateX(8.2%);}
 
-  .colLine6 {x1: 95.8%; x2: 95.8%;}
+  .colLine6 {x1: 88.8%; x2: 88.8%; transform: translateX(7.8%);}
 
   .rowLine1 {y1: 27.5%; y2: 27.5%;}
   
