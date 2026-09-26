@@ -41,7 +41,7 @@
 
 .productMeta {display: flex; justify-content: space-between; align-items: baseline;}
 
-.productName {font-size: 12px; font-weight: 400; color: #1a1a1a; margin: 0;}
+.productName {font-size: 12px; font-weight: 400; line-height: 1.5; margin: 0;}
 
 .productPrice {font-size: 12px; font-weight: 500; color: #1a1a1a;}
 
