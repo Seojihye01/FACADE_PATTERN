@@ -28,9 +28,9 @@
 .infoWrapper {display: flex; align-items: center; gap: 40px; font-size: 12px; letter-spacing: 0.08em; color: #1a1a1a;
               transition: opacity 0.2s ease;}
 
-.lookNo {font-weight: 500; font-family: 'Josefin Sans', sans-serif; width: 100px; flex-shrink: 0;}
+.lookNo {font-weight: 500; width: 100px; flex-shrink: 0;}
 
-.productName {font-weight: 600; color: #333; width: 260px; white-space: nowrap; flex-shrink: 0;}
+.productName {font-weight: 400; color: #333; width: 260px; white-space: nowrap; flex-shrink: 0;}
 
 .arrowControls {display: flex; align-items: center; gap: 8px;}
 

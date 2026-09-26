@@ -434,7 +434,7 @@
 
 .mobileCartPagination {display: flex; gap: 12px; font-size: 11px; font-weight: 500; color: rgba(26, 26, 26, 0.4);}
 
-.mobileCartPagination span {cursor: pointer;}
+.mobileCartPagination span {cursor: pointer; -webkit-tap-highlight-color: transparent;}
 
 .mobileCartPagination span.activePage {color: #1A1A1A;}
 
