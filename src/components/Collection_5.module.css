@@ -35,11 +35,11 @@
 .prevCollectionBox {position: absolute; top: 75.5%; height: 13%; left: 60.5%; width: 26.3%; display: flex;
                     justify-content: flex-start; align-items: center; padding-left: 12px; box-sizing: border-box;}
 
-.prevCollectionBtn {background: none; border: none; display: inline-flex; align-items: center; gap: 6px;
-                    font-size: 11px; color: #222; cursor: pointer; 
+.prevCollectionBtn {background: none; border: none; display: inline-flex; align-items: center; justify-content: center;
+                    gap: 6px; font-size: 11px; color: #222; line-height: 1; cursor: pointer; 
                     transition: transform 0.15s ease, opacity 0.2s ease;}
 
-.arrowIcon {width: 10px; height: 10px; display: block;}
+.arrowIcon {width: 10px; height: 10px; display: block; flex-shrink: 0;}
 
 .prevCollectionBtn:hover {opacity: 0.8;}
 
@@ -79,7 +79,7 @@
 
   .dateText {font-size: 9px;}
 
-  .collectionBox {justify-content: flex-end; padding: 0 6px 0 0;}
+  .collectionBox {justify-content: flex-end; padding: 0 4px 0 0;}
 
   .collectionText {font-size: 11px;}
 
@@ -87,12 +87,12 @@
 
   .mobileBr {display: inline;}
 
-  .prevCollectionBox {justify-content: flex-start; padding-left: 6px; width: auto;}
+  .prevCollectionBox {justify-content: flex-start; padding-left: 4px; width: auto;}
 
-  .prevCollectionBtn {font-size: 9px; gap: 4px; padding: 0;}
+  .prevCollectionBtn {font-size: 9px; gap: 2px; padding: 0;}
 
   .prevCollectionBtn span {white-space: nowrap;}
 
-  .arrowIcon {width: 8px; height: 8px; flex-shrink: 0;}
+  .arrowIcon {width: 8px; height: 8px;}
 
 }
