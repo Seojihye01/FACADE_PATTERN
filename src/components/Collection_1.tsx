@@ -10,6 +10,8 @@ const Collection_1: React.FC = () => {
           src="/media/Product/Collection_Main.png" 
           alt="2026 Pre-Fall Collection Main" 
           className={styles.mainImage} 
+          loading="lazy"      
+          decoding="async"
         />
       </div>
 

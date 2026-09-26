@@ -73,6 +73,8 @@ const Collection_2: React.FC = () => {
                 src={Array.isArray(item.imgUrl) ? item.imgUrl[0] : item.imgUrl}
                 alt={item.name}
                 className={styles.productImg}
+                loading="lazy"      
+                decoding="async"
               />
             </div>
           );

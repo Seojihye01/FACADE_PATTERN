@@ -84,6 +84,8 @@ const Collection_4: React.FC = () => {
                   src={look.modelImg}
                   alt={`Lookbook Model ${index + 1}`}
                   className={styles.productImg}
+                  loading="lazy"      
+                  decoding="async"
                 />
               </div>
 

@@ -154,6 +154,8 @@ const Collection_3: React.FC = () => {
                       src={selectedProduct.imgUrl} 
                       alt={selectedProduct.name} 
                       className={styles.mainImg}
+                      loading="lazy"      
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -260,7 +262,7 @@ const FlyerItem: React.FC<FlyerItemProps> = ({ item, isSelected, onClick }) => {
         <span className={styles.flyerNo}>{item.lookNo}</span>
       </div>
       <div className={styles.flyerBody}>
-        <img src={item.imgUrl} alt={item.name} className={styles.flyerImg} />
+        <img src={item.imgUrl} alt={item.name} className={styles.flyerImg} loading="lazy" decoding="async"/>
         <span className={styles.flyerNameText}>{item.name}</span>
       </div>
     </div>

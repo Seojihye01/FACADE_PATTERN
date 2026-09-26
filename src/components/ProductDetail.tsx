@@ -195,6 +195,14 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
             <h1 className={styles.productName}>{product.name}</h1>
             <div className={styles.price}>₩{product.price.toLocaleString()}</div>
 
+            {product.materialAndCare && (
+              <div className={styles.materialSummary}>
+                <span className={styles.materialText}>
+                  {product.material.split('\n')[0]} 
+                </span>
+              </div>
+            )}
+
             <div className={styles.colorSelector}>
               <div className={styles.colorGroup}>
                 {product.colour.map((c) => {

@@ -16,7 +16,7 @@
 .cardColumn {display: flex; flex-direction: column; gap: 20px;}
 
 .imageWrapper {width: 100%; aspect-ratio: 1 / 1.85; overflow: hidden; background-color: #D9D9D9; opacity: 0;
-               transform: translateY(50px); will-change: transform, opacity;}
+               transform: translateY(50px); will-change: transform, opacity; contain: layout paint;}
 
 .imageWrapper.animated {animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;}
 

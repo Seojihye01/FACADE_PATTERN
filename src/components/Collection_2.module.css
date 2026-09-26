@@ -11,7 +11,7 @@
 .imageGrid {width: 100%; max-width: 1200px; display: grid; grid-template-columns: repeat(9, 1fr); gap: 2px;}
 
 .imageCard {position: relative; overflow: hidden; background-color: #EFEFEF; aspect-ratio: 3 / 4; cursor: grab;
-            transform: translateY(0px); 
+            transform: translateY(0px); will-change: transform;
             transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), filter 0.3s ease;}
 
 .animated .imageCard.activeCard {transform: translateY(-12px); z-index: 10; filter: blur(0);}

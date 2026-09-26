@@ -54,6 +54,7 @@ video {
 
 /* 7. 폼 요소 기본 스타일 정리 */
 button,
+a,
 input,
 textarea,
 select {
@@ -61,6 +62,7 @@ select {
   border: none;
   background: none;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* 8. 테이블 태그 기본 설정 */

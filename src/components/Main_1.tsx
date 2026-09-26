@@ -13,6 +13,8 @@ const Main_1: React.FC = () => {
               src="/media/Product/Main_1.jpg" 
               alt="2026 Pre-Fall Collection 1" 
               className={styles.mainImg}
+              loading="lazy"      
+              decoding="async"
             />
           </div>
           <div className={styles.rightImageWrapper}>
@@ -20,6 +22,8 @@ const Main_1: React.FC = () => {
               src="/media/Product/Main_2.png" 
               alt="2026 Pre-Fall Collection 2" 
               className={styles.mainImg}
+              loading="lazy"      
+              decoding="async"
             />
             <div className={styles.imageOverlay}></div>
           </div>

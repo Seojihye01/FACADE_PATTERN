@@ -1,8 +1,9 @@
 .container {width: 100%; min-height: 100vh; display: flex; background-color: #F7F7F7; box-sizing: border-box;}
 
-.imageSection {width: 38%; min-width: 320px; height: 100vh; position: relative; overflow: hidden; margin-left: 250px;}
+.imageSection {width: 38%; min-width: 320px; height: 100vh; position: relative; overflow: hidden; margin-left: 250px;
+               contain: layout paint;}
 
-.mainImage {width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(50%);}
+.mainImage {width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(50%); will-change: transform;}
 
 .textSection {width: 62%; display: flex; flex-direction: column; justify-content: center; padding: 0 10% 0 8%;
               box-sizing: border-box; color: #1A1A1A;}
