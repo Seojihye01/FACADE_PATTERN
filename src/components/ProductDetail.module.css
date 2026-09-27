@@ -107,14 +107,14 @@
 
   .container {flex-direction: column; height: auto; overflow: auto;}
 
-  .leftImageSection {width: 100%; height: auto; aspect-ratio: auto; margin-top: 0; cursor: default;}
+  .leftImageSection {width: 100%; height: auto; aspect-ratio: auto; margin-top: 40px; cursor: default;}
 
   .imageList {display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory;}
 
   .imageWrapper {margin-bottom: 0;}
 
   .imageWrapper img {width: 100%; height: auto;}
-  
+
   .rightContentSection {width: 100%;}
 
   .stickyWrapper {height: auto; margin-top: 0; flex-direction: column; padding: 30px 20px 60px 20px; gap: 40px;}
