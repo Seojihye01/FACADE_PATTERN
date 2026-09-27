@@ -130,3 +130,10 @@
   .actionGroup {max-width: 100%; margin-top: 20px;}
   
 }
+
+/* 2. Compact Mobile (480px 이하) */
+@media (max-width: 480px) {
+
+  .leftImageSection {margin-top: 80px;}
+
+}
