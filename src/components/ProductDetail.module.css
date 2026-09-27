@@ -5,7 +5,7 @@
                background-color: rgba(26, 26, 26, 0.25); font-size: 10px; letter-spacing: 0.1em; font-weight: 500;
                color: #F0F0F0; border-radius: 2px; backdrop-filter: blur(4px); transition: opacity 0.15s ease;}
 
-.leftImageSection {width: 38%; height: calc(100vh - 80px); position: relative; margin-top: 80px; overflow: hidden;
+.leftImageSection {width: 38%; height: auto; position: relative; margin-top: 80px; overflow: hidden;
                    cursor: none; display: flex; justify-content: center; align-items: center;}
 
 .leftImageSection:focus {outline: none;}
@@ -15,10 +15,10 @@
 
 .imageList::-webkit-scrollbar {display: none;}
 
-.imageWrapper {width: 100%; height: 100%; scroll-snap-align: start; scroll-snap-stop: always;
+.imageWrapper {width: 100%; height: auto; scroll-snap-align: start; scroll-snap-stop: always;
                flex-shrink: 0; margin-bottom: 20px;}
 
-.imageWrapper img {width: 100%; height: 100%; object-fit: contain; display: block;}
+.imageWrapper img {width: 100%; height: auto; object-fit: contain; display: block;}
 
 .rightContentSection {width: 62%; position: relative;}
 
@@ -107,10 +107,14 @@
 
   .container {flex-direction: column; height: auto; overflow: auto;}
 
-  .leftImageSection {width: 100%; height: auto; aspect-ratio: 3 / 4; margin-top: 0; cursor: default;}
+  .leftImageSection {width: 100%; height: auto; aspect-ratio: auto; margin-top: 0; cursor: default;}
 
   .imageList {display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory;}
 
+  .imageWrapper {margin-bottom: 0;}
+
+  .imageWrapper img {width: 100%; height: auto;}
+  
   .rightContentSection {width: 100%;}
 
   .stickyWrapper {height: auto; margin-top: 0; flex-direction: column; padding: 30px 20px 60px 20px; gap: 40px;}
