@@ -1,0 +1,41 @@
+<svg width="211" height="190" viewBox="0 0 211 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_n_769_574)">
+<rect width="211" height="190" fill="#E1E3E8"/>
+</g>
+<line x1="14.05" y1="2.18558e-09" x2="14.05" y2="190" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="17.05" y1="2.18558e-09" x2="17.05" y2="190" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="72.05" y1="2.18558e-09" x2="72.05" y2="190" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="211" y1="19.05" x2="-2.18557e-09" y2="19.05" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="211" y1="49.05" x2="-2.18557e-09" y2="49.05" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="211" y1="52.05" x2="-2.18557e-09" y2="52.05" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="211" y1="126.05" x2="-2.18557e-09" y2="126.05" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="211" y1="136.05" x2="-2.18557e-09" y2="136.05" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="211" y1="167.05" x2="-2.18557e-09" y2="167.05" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="110.05" y1="2.18558e-09" x2="110.05" y2="190" stroke="#1A1A1A" stroke-width="0.1"/>
+<line x1="194.05" y1="2.18558e-09" x2="194.05" y2="190" stroke="#1A1A1A" stroke-width="0.1"/>
+<defs>
+<filter id="filter0_n_769_574" x="0" y="0" width="211" height="190" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="10 10" stitchTiles="stitch" numOctaves="3" result="noise" seed="6161" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise2">
+<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise2" result="noise2Clipped" />
+<feFlood flood-color="rgba(0, 0, 0, 0.1)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feFlood flood-color="rgba(255, 255, 255, 0.25)" result="color2Flood" />
+<feComposite operator="in" in2="noise2Clipped" in="color2Flood" result="color2" />
+<feMerge result="effect1_noise_769_574">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+<feMergeNode in="color2" />
+</feMerge>
+</filter>
+</defs>
+</svg>
